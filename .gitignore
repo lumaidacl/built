@@ -1,0 +1,16 @@
+# General stuffs
+.DS_Store
+
+# Initial layout generated directories
+.temporal
+build
+
+# Node stuffs directories
+npm-debug.log
+node_modules
+
+#Firebase
+.firebaserc
+
+# Visual Studio Code
+.vscode
