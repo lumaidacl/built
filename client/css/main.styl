@@ -116,17 +116,32 @@ body
     font-size .8em
     font-weight 300
     margin-top 0
-    padding-top 0
 /**
   component subtitles page
 */
-.subtitle
-  font-size 25px
-  font-weight 300
-  text-align left
-  width 9em
+.subtitle-box
+  display flex
   margin 1em
-
+  height 4em
+  align-items center
+  margin-bottom 1em
+  &__text
+    flex 2
+    &--single
+      flex 1
+  &__title
+    font-size 25px
+    font-weight 300
+    text-align left
+    margin .5em 0
+  &__bar
+    height .1em
+    background-color black
+    width 50%
+    flex 1
+    background-color _green_light
+    &--double
+      flex 2
 /**
   about-built
 */
@@ -134,7 +149,7 @@ body
   background-color _white
 .built
   width 353px
-  height 343px
+  height 312px
   margin 1em auto
   box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
   &__wrap
@@ -146,7 +161,7 @@ body
   &__description
     padding .5em 0
   &__subtitle
-    margin .5em
+    margin .3em .5em
     text-align left
     font-size 30px
     font-weight 300
@@ -159,10 +174,11 @@ body
     font-weight 300
   &__button
     text-align center
-    margin 1em 0
+    margin .5em 0
     button
       width 150px
       height 45px
+      border none
       border-radius 5px
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
       color _white
