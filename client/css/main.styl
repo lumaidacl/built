@@ -1,7 +1,181 @@
 @import 'normalize'
 
-body
-  font-family: 'Roboto Mono', monospace;
+_background-image = url(../img/group.png)
+_background-project-1 = url(../img/group-3.png)
 
-h1
-  color blue
+_green = #61bb46
+_green_light = #8fc73e
+_gray_dark = #303030
+_gray_medium = #4a4a4a
+_gray_light = #9b9b9b
+_gray_soft = #d8d8d8
+_white = #FFFFFF
+
+body
+  font-family 'Roboto', sans-serif
+  font-size 16px
+/**
+  about-us
+*/
+.about-us
+  width 100%
+  z-index 1
+  background-image _background-image
+  margin 0
+  background-size cover
+  //height 100vh
+  text-align center
+  background-position center center
+  &__box
+    display flex
+    height 100vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+  &__logo
+    text-align center
+    margin 0
+    img
+      width 242px
+      height 110px
+  &__text
+    text-align center
+  &__title
+    font-size 1.42em
+    max-width 402px
+    font-weight 300
+    font-size 30px
+    margin 0
+  &__button
+    text-align center
+    button
+      width 300px
+      height 50px
+      border-radius 10px
+      background-image linear-gradient(to bottom, #8fc73e, #61bb46)
+      box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
+      color white
+      margin 0
+      font-weight 300
+.social-network
+  display flex
+  justify-content flex-end
+  padding .7em
+  &__logo
+    align-content flex-end
+    margin .3em
+/**
+  about-project
+*/
+.about-project
+  background-color white
+.project
+  background-image _background-project-1
+  max-width 22em
+  height 384px
+  margin 0 auto
+  background-size cover
+  &__wrapper
+    padding 2em
+  &__title
+    margin 0
+    color _white
+    text-align center
+    font-size 2em
+    font-weight 300
+  &__button
+    text-align center
+    margin 1em 0
+    button
+      width 180px
+      height 45px
+      border-radius 5px
+      background-image linear-gradient(to bottom, #8fc73e, #61bb46)
+      color _white
+      margin 0
+      font-weight 400
+.circle
+  width 144px
+  height 144px
+  border 5px solid _green
+  border-radius 50%
+  background-color blue
+  margin 0 auto
+  background-color rgba(0, 0, 0, 0.5)
+  &__percent
+    color _white
+    text-align center
+    font-size 2.7em
+    font-weight 300
+    margin-top 1em
+    margin-bottom 0
+  &__text
+    color _white
+    text-align center
+    font-size .8em
+    font-weight 300
+    margin-top 0
+    padding-top 0
+/**
+  component subtitles page
+*/
+.subtitle
+  font-size 25px
+  font-weight 300
+  text-align left
+  width 9em
+  margin 1em
+
+/**
+  about-built
+*/
+.about-built
+  background-color _white
+.built
+  width 353px
+  height 343px
+  margin 1em auto
+  box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
+  &__wrap
+    display flex
+  &__image
+    flex-grow 1
+  &__figure
+    margin 0
+  &__description
+    padding .5em 0
+  &__subtitle
+    margin .5em
+    text-align left
+    font-size 30px
+    font-weight 300
+  &__text
+    margin 0 1em
+    text-align left
+    font-size 1em
+    width 130px
+    height 88px
+    font-weight 300
+  &__button
+    text-align center
+    margin 1em 0
+    button
+      width 150px
+      height 45px
+      border-radius 5px
+      background-image linear-gradient(to bottom, #8fc73e, #61bb46)
+      color _white
+      margin 0
+      font-weight 300
+      font-size 1em
+  &__state
+    text-align left
+    margin 0 1em
+    font-size .8em
+    font-weight 300
+    color _green
+@media only screen and (min-width: 1000px)
+  .align
+    max-width 900px
+    margin 0 auto
