@@ -14,6 +14,8 @@ _white = #FFFFFF
 body
   font-family 'Roboto', sans-serif
   font-size 16px
+body, html
+  height 100%
 /**
   about-us
 */
@@ -132,11 +134,11 @@ body
   &__title
     font-size 25px
     font-weight 300
-    text-align left
+    text-align center
     margin .5em 0
+    padding-right .3em
   &__bar
     height .1em
-    background-color black
     width 50%
     flex 1
     background-color _green_light
@@ -191,6 +193,26 @@ body
     font-size .8em
     font-weight 300
     color _green
+/**
+  about-gallery
+*/
+.parent
+  display flex
+  width 368px
+  margin 0 auto
+  flex-wrap wrap
+.work
+  &__figure
+    margin .5em
+  &__img
+    width 100%
+/**
+  form
+*/
+.ask-us
+  &__form
+      display block
+      margin 1.5em 0
 @media only screen and (min-width: 1000px)
   .align
     max-width 900px
