@@ -21,9 +21,10 @@ body, html
 /**
   nav-bar
 */
-nav
+.mobile-nav
   position fixed
   bottom 0
+  display block
   width 100%
   background _white
   box-shadow 0 -2px 5px 0 rgba(0, 0, 0, 0.2)
@@ -76,13 +77,13 @@ nav
   &__text
     text-align center
   &__title
-    font-size 1.42em
+    font-size 30px
     max-width 402px
     font-weight 300
     font-size 30px
     display block
     width 70%
-    margin 0 auto
+    margin 0 auto 50px auto
   &__button
     text-align center
     button
@@ -107,20 +108,26 @@ nav
 */
 .about-project
   background-color white
+  .align
+    display flex
+    flex-direction column
 .project
   background-image _background-project-1
   height 384px
+  width 100%
   margin 0 auto
   background-size cover
   background-repeat no-repeat
   &__wrapper
     padding 4em 0 2em 0
   &__title
-    margin 0
+    margin 20px auto 0 auto
     color _white
     text-align center
     font-size 2em
     font-weight 300
+    display block
+    width 80%
   &__button
     text-align center
     margin 1em 0
@@ -158,7 +165,7 @@ nav
     text-align center
     font-size 16px
     font-weight 100
-    margin-top 0
+    margin-top 0px
 /**
   component subtitles page
 */
@@ -169,7 +176,7 @@ nav
   align-items center
   margin-bottom 1em
   &__text
-    flex 2
+    flex 1
     &--single
       flex 1
   &__title
@@ -241,7 +248,7 @@ nav
 */
 .parent
   display flex
-  width 368px
+  width 90%
   margin 0 auto
   flex-wrap wrap
 .work
@@ -257,9 +264,11 @@ nav
   margin 0 auto
   &__form
     margin 1.5em 0
+    text-align left
   &__label
     font-size 12px
     font-weight 400
+    text-align left
     letter-spacing 0
     color _green_light
   input, textarea
@@ -293,7 +302,25 @@ nav
     margin 0 auto
 
 @media only screen and (min-width: 550px)
+  .align
+    max-width 1024px
+    text-align center
+  .subtitle-box
+    &__text
+      flex 0
+    &__title
+      text-align left
+  /**
+    mobile-nav
+  */
+  .mobile-nav
+    display none      
+  /**
+    about-us
+  */
   .about-us
+    &__box
+      flex-direction column
     &__wrapper
       width 900px
       height 150px
@@ -302,11 +329,34 @@ nav
       left 50%
       margin -75px 0 0 -450px
     &__button
-      margin 15px 0 0 25px
+      margin 15px 0 0 40px
       text-align left
     &__text
       text-align left
     &__title
+      width auto
       font-size 40px
-      margin 0 0 0 25px
+      margin 0 0 0 40px
       text-align left
+  /**
+    about-project
+  */
+  .about-project
+    .align
+      display flex
+      flex-direction row
+      width 100%
+      max-width 100%
+    .project
+      width 100%
+      background-position bottom
+  /**
+    about-built
+  */
+  .about-built
+    .built
+      display inline-block
+      margin 10px
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  
+  
