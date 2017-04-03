@@ -13,8 +13,15 @@
 		menu
   </div>
 </header> -->
+	<nav>
+		<ul>
+			<li class="active"><a href="#">Inicio</a></li>
+			<li><a href="#">Proyectos</a></li>
+			<li><a href="#">Contacto</a></li>
+			<li><a href="#">Postventa</a></li>
+		</ul>
+	</nav>
 	<section class="about-us">
-		<div class="align">
 			<div class="social-network">
 				<a class="social-network__logo">
 					<img src="img/icon-fb.svg" alt="facebook" />
@@ -23,7 +30,7 @@
 					<img src="img/icon-ig.svg" alt="instagram" />
 				</a>
 			</div>
-
+		<div class="align">
 			<div class="about-us__box">
 				<div class="about-us__wrapper">
 					<div class="about-us__logo">
@@ -31,11 +38,11 @@
 					</div>
 					<div class="about-us__text">
 						<h3 class="about-us__title">Construimos espacios que realizan sueños</h3>
-					</div>
 					<div class="about-us__button">
 						<button type="button">
 							Descubre nuestros proyectos
 						</button>
+					</div>
 					</div>
 				</div>
 			</div>
@@ -47,7 +54,7 @@
 			<article class="project">
 				<div class="project__wrapper">
 					<div class="circle">
-						<p class="circle__percent">50%</p></br>
+						<p class="circle__percent">50%</p>
 						<p class="circle__text">vendido</p>
 					</div>
 					<h3 class="project__title">Terrazas de Aranjuez</h3>
@@ -61,7 +68,7 @@
 			<article class="project">
 				<div class="project__wrapper">
 					<div class="circle">
-						<p class="circle__percent">75%</p></br>
+						<p class="circle__percent">75%</p>
 						<p class="circle__text">vendido</p>
 					</div>
 					<h3 class="project__title">Portal de Queru Queru</h3>
@@ -101,7 +108,6 @@
 						<div class="built__button">
 							<button type="button">
 								Ver más Detalles
-								<span>></span>
 							</button>
 						</div>
 						<h4 class="built__state">
@@ -128,7 +134,6 @@
 						<div class="built__button">
 							<button type="button">
 								Ver más Detalles
-								<span>></span>
 							</button>
 						</div>
 						<h4 class="built__state">
@@ -155,7 +160,6 @@
 						<div class="built__button">
 							<button type="button">
 								Ver más Detalles
-								<span>></span>
 							</button>
 						</div>
 						<h4 class="built__state">
@@ -182,7 +186,6 @@
 						<div class="built__button">
 							<button type="button">
 								Ver más Detalles
-								<span>></span>
 							</button>
 						</div>
 						<h4 class="built__state">
@@ -258,17 +261,17 @@
 				</div>
 			</div>
 			<div class="ask-us">
-				<form class="ask-us__form" action="index.html" method="post">
+				<form class="ask-us__form">
 				 <label class="ask-us__label">Nombre Completo</label><br>
-				 <input type="text" name="mail" placeholder="Tu nombre">
+				 <input type="text" name="name" placeholder="Tu Nombre">
 				 </input><br>
-				 <label class="ask-us__label">Email</label><br>
+				 <label class="ask-us__label">E-mail</label><br>
 				 <input type="text" name="mail" placeholder="Tu Email">
 				 </input><br>
 				 <label class="ask-us__label">Mensaje</label><br>
 				 <textarea row="1" name="message" placeholder="Mensaje">
 				 </textarea><br>
-				 <button type="button">
+				 <button type="button" class="ask-us__button">
 					 Enviar
 				 </button>
 				</form>

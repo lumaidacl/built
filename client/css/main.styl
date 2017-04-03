@@ -1,7 +1,7 @@
 @import 'normalize'
 
 _background-image = url(../img/group.png)
-_background-project-1 = url(../img/group-3.png)
+_background-project-1 = url(../img/on-sale-bg.jpg)
 
 _green = #61bb46
 _green_light = #8fc73e
@@ -17,7 +17,35 @@ body
 body, html
   height 100%
 .section
-  padding 2em 1em
+  padding 2em 0em
+/**
+  nav-bar
+*/
+nav
+  position fixed
+  bottom 0
+  width 100%
+  background _white
+  box-shadow 0 -2px 5px 0 rgba(0, 0, 0, 0.2)
+  ul
+    display flex
+    margin 0
+    padding 0
+    li
+      flex-grow 1
+      list-style none
+      text-align center
+      font-size 14px
+      font-weight 300
+      opacity 0.3
+    .active
+      opacity 1
+    a
+      padding 1em 0
+      color _gray_dark
+      text-decoration none
+      display block
+
 /**
   about-us
 */
@@ -37,6 +65,8 @@ body, html
     display flex
     justify-content center
     flex-wrap wrap
+    height 400px
+    margin 4em auto
   &__logo
     text-align center
     margin 0
@@ -50,7 +80,9 @@ body, html
     max-width 402px
     font-weight 300
     font-size 30px
-    margin 0
+    display block
+    width 70%
+    margin 0 auto
   &__button
     text-align center
     button
@@ -58,7 +90,8 @@ body, html
       height 50px
       border-radius 10px
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
-      box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
+      box-shadow 2px 2px 5px 0 rgba(0, 0, 0, 0.3)
+      border none
       color white
       margin 0
       font-weight 300
@@ -76,12 +109,12 @@ body, html
   background-color white
 .project
   background-image _background-project-1
-  max-width 22em
   height 384px
   margin 0 auto
   background-size cover
+  background-repeat no-repeat
   &__wrapper
-    padding 2em
+    padding 4em 0 2em 0
   &__title
     margin 0
     color _white
@@ -98,7 +131,13 @@ body, html
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
       color _white
       margin 0
-      font-weight 400
+      font-weight 300
+      font-size 14px
+      border none
+
+    button:hover
+      background-image linear-gradient(to bottom, #8fc73e, #61bb46)
+      box-shadow 1px 1px 7px 0 rgba(0, 0, 0, 0.4)
 .circle
   width 144px
   height 144px
@@ -117,8 +156,8 @@ body, html
   &__text
     color _white
     text-align center
-    font-size .8em
-    font-weight 300
+    font-size 16px
+    font-weight 100
     margin-top 0
 /**
   component subtitles page
@@ -152,7 +191,9 @@ body, html
 .about-built
   background-color _white
 .built
-  width 353px
+  width 90%
+  max-width 433px
+  min-width: 340px
   height 312px
   margin 1em auto
   box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
@@ -190,8 +231,8 @@ body, html
       font-weight 300
       font-size 1em
   &__state
-    text-align left
-    margin 0 1em
+    text-align center
+    margin 1em 0 1em 0
     font-size .8em
     font-weight 300
     color _green
@@ -216,7 +257,56 @@ body, html
   margin 0 auto
   &__form
     margin 1.5em 0
+  &__label
+    font-size 12px
+    font-weight 400
+    letter-spacing 0
+    color _green_light
+  input, textarea
+    width 100%
+    border solid 1px _gray_soft
+    height 36px
+    border-radius 3px
+    margin 0 0 1em 0
+  textarea
+    height 4em
+  ::placeholder
+    font-size 14px
+    padding 0 0 0 0.5em
+    color _gray_soft
+  &__button
+    text-align center
+    display block
+    margin .5em auto
+    width 80%
+    height 45px
+    border none
+    border-radius 5px
+    background-image linear-gradient(to bottom, #8fc73e, #61bb46)
+    color _white
+    font-weight 300
+    font-size 1em
+
+
 @media only screen and (min-width: 1000px)
   .align
-    max-width 900px
     margin 0 auto
+
+@media only screen and (min-width: 550px)
+  .about-us
+    &__wrapper
+      width 900px
+      height 150px
+      position absolute
+      top 50%
+      left 50%
+      margin -75px 0 0 -450px
+    &__button
+      margin 15px 0 0 25px
+      text-align left
+    &__text
+      text-align left
+    &__title
+      font-size 40px
+      margin 0 0 0 25px
+      text-align left
