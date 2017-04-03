@@ -2,6 +2,7 @@
 
 _background-image = url(../img/group.png)
 _background-project-1 = url(../img/on-sale-bg.jpg)
+_background-footer = url(../img/group-11.png)
 
 _green = #61bb46
 _green_light = #8fc73e
@@ -56,7 +57,6 @@ body, html
   background-image _background-image
   margin 0
   background-size cover
-  //height 100vh
   text-align center
   background-position center center
   &__box
@@ -80,7 +80,6 @@ body, html
     font-size 30px
     max-width 402px
     font-weight 300
-    font-size 30px
     display block
     width 70%
     margin 0 auto 50px auto
@@ -103,6 +102,38 @@ body, html
   &__logo
     align-content flex-end
     margin .3em
+/**
+  our-projects
+*/
+.our-projects
+  width 100%
+  z-index 1
+  background-image _background-image
+  margin 0
+  background-size cover
+  text-align center
+  background-position center center
+  position relative
+  &__box
+    display flex
+    height 75vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 4em auto
+  &__text
+    text-align center
+  &__title
+    font-size 55px
+    font-weight 300
+    display block
+    min-width 304px
+    max-width 485px
+    margin 30px auto 50px auto
+    line-height 1.04
+    color _white
 /**
   about-project
 */
@@ -193,6 +224,14 @@ body, html
     &--double
       flex 2
 /**
+  divisor
+*/
+.bar
+  height .15em
+  width 95%
+  background-color _green_light
+  border none
+/**
   about-built
 */
 .about-built
@@ -225,10 +264,10 @@ body, html
     height 88px
     font-weight 300
   &__button
-    text-align center
-    margin .5em 0
+    text-align left
+    margin .8em
     button
-      width 150px
+      width 170px
       height 45px
       border none
       border-radius 5px
@@ -236,13 +275,21 @@ body, html
       color _white
       margin 0
       font-weight 300
-      font-size 1em
+      font-size .9em
   &__state
-    text-align center
-    margin 1em 0 1em 0
+    text-align left
+    margin 1.5em 1em
     font-size .8em
     font-weight 300
     color _green
+/**
+  project-built
+*/
+.project-built
+  background-color _white
+  position absolute
+  top 26em
+  width 100%
 /**
   about-gallery
 */
@@ -295,8 +342,26 @@ body, html
     color _white
     font-weight 300
     font-size 1em
-
-
+.about-footer
+  width 100%
+  height 192px
+  background-image _background-footer
+  margin 0
+  background-size cover
+  text-align center
+  background-position center center
+  bottom 0
+  &__wrap
+    display flex
+  &__logo
+    margin 0
+    flex-grow 1
+    img
+      width 149px
+      height 68px
+  &__box
+    width 700px
+    height 100px
 @media only screen and (min-width: 1000px)
   .align
     margin 0 auto
@@ -314,7 +379,7 @@ body, html
     mobile-nav
   */
   .mobile-nav
-    display none      
+    display none
   /**
     about-us
   */
@@ -357,6 +422,9 @@ body, html
     .built
       display inline-block
       margin 10px
-      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
-  
-  
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5)
+  .project-built
+    .built
+      display inline-block
+      margin 10px
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5)
