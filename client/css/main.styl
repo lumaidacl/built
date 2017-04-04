@@ -22,6 +22,8 @@ body, html
 /**
   nav-bar
 */
+.desktop-nav
+  display none
 .mobile-nav
   position fixed
   bottom 0
@@ -29,6 +31,7 @@ body, html
   width 100%
   background _white
   box-shadow 0 -2px 5px 0 rgba(0, 0, 0, 0.2)
+  z-index 100
   ul
     display flex
     margin 0
@@ -85,15 +88,18 @@ body, html
     margin 0 auto 50px auto
   &__button
     text-align center
-    button
+    a
+      display block
       width 300px
-      height 50px
+      text-align center
+      text-decoration none
+      padding 1em
       border-radius 10px
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
       box-shadow 2px 2px 5px 0 rgba(0, 0, 0, 0.3)
       border none
       color white
-      margin 0
+      margin 0 auto
       font-weight 300
 .social-network
   display flex
@@ -342,6 +348,9 @@ body, html
     color _white
     font-weight 300
     font-size 1em
+/**
+  Footer
+*/
 .about-footer
   width 100%
   height 192px
@@ -362,6 +371,7 @@ body, html
   &__box
     width 700px
     height 100px
+
 @media only screen and (min-width: 1000px)
   .align
     margin 0 auto
@@ -376,9 +386,45 @@ body, html
     &__title
       text-align left
   /**
+    desktop-nav
+  */
+  .desktop-nav
+    display block
+    background rgba(255,255,255,0.8)
+    position fixed
+    width 100%
+    height 57px
+    .logo
+      position absolute
+      left 13px
+      top 13px
+    ul
+      margin 0
+      padding 0
+      position absolute
+      right 0
+      li
+        display inline-block
+        vertical-align middle
+        a
+          opacity 0.6
+          display block
+          padding 13px 23px
+          color _gray_medium
+          text-decoration: none
+          font-weight: 300
+        .active
+          opacity: 1
+          border-bottom solid 3px _green
+        .social-network
+          &__logo
+            padding 10px 5px
+  /**
     mobile-nav
   */
   .mobile-nav
+    display none
+  .social-network
     display none
   /**
     about-us
@@ -403,6 +449,9 @@ body, html
       font-size 40px
       margin 0 0 0 40px
       text-align left
+    &__button
+      a
+        margin 0
   /**
     about-project
   */
