@@ -2,6 +2,7 @@
 
 _background-image = url(../img/group.png)
 _background-projects = url(../img/projects-bg.jpg)
+_background-contact = url(../img/contact-bg.jpg)
 _background-project-1 = url(../img/on-sale-bg.jpg)
 _background-footer = url(../img/group-11.png)
 
@@ -291,28 +292,7 @@ body, html
     font-size .8em
     font-weight 300
     color _green
-/**
-  information contact
-*/
-.contact-info
-  background-color _white
-  position absolute
-  top 18em
-  width 100%
-.information
-  margin 1em 1em 5em 1em
-  &__subtitle
-    color _green_light
-    margin-bottom 0
-    font-weight 300
-  &__bar
-    height .15em
-    width 100%
-    background-color _green_light
-    border none
-  &__text
-    margin .5em
-    font-weight 300
+
 /**
   project-built
 */
@@ -378,7 +358,7 @@ body, html
   width 100%
   height 192px
   background-image _background-footer
-  margin 0
+  margin 0 0 45px 0
   padding 0
   background-size cover
   text-align center
@@ -439,7 +419,63 @@ Projects view
     &__figure
       text-align: left
 
-
+/**
+  Contact View
+*/
+.contact-view
+  width 100%
+  height 475px
+  z-index 1
+  background-image _background-projects
+  margin 0
+  background-size cover
+  text-align center
+  background-position center middle
+  &__box
+    display flex
+    height 75vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 0em auto
+  &__text
+    text-align center
+  &__title
+    font-size 55px
+    font-weight 300
+    display block
+    margin 190px auto 50px auto
+    color _white
+.contact-info
+  background-color _white
+  width 100%
+  display block
+  margin -100px auto 6em auto
+  max-width 1024px
+  box-shadow 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+  border-radius 5px
+  .align
+    display flex
+    flex-direction column
+    .info-container
+      flex 1
+.information
+  margin 1em 1em 5em 1em
+  &__subtitle
+    color _green_light
+    margin-bottom 0
+    font-weight 300
+  &__bar
+    height 2px
+    width 100%
+    background-color _green_light
+    border none
+  &__text
+    margin .5em
+    font-weight 300
+  
 @media only screen and (min-width: 1000px)
   .align
     margin 0 auto
@@ -559,6 +595,11 @@ Projects view
       max-width 1024px
     .bar
       max-width 895px
+  /**
+    Footer
+  */
+  .about-footer
+    margin 0
 
   .projects-container
     display flex
@@ -572,3 +613,36 @@ Projects view
       margin 1em
       &__figure
         text-align: left
+
+
+  .contact-info
+    width 100%
+    display block
+    margin -100px auto 6em auto
+    max-width 1024px
+    box-shadow 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+    border-radius 5px
+    .align
+      display flex
+      flex-direction row
+      justify-content center
+      max-width: 800px
+      .info-container
+        flex 1
+        text-align left
+        margin 0 1em 
+
+  .information
+    margin 1em 1em 5em 1em
+    &__subtitle
+      color _green_light
+      margin-bottom 0
+      font-weight 300
+    &__bar
+      height 2px
+      width 100%
+      background-color _green_light
+      border none
+    &__text
+      margin .5em
+      font-weight 300
