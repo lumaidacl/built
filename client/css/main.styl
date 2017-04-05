@@ -1,6 +1,8 @@
 @import 'normalize'
 
 _background-image = url(../img/group.png)
+_background-projects = url(../img/projects-bg.jpg)
+_background-contact = url(../img/contact-bg.jpg)
 _background-project-1 = url(../img/on-sale-bg.jpg)
 _background-footer = url(../img/group-11.png)
 
@@ -65,6 +67,7 @@ body, html
   &__box
     display flex
     height 100vh
+    z-index: 80
   &__wrapper
     display flex
     justify-content center
@@ -150,21 +153,32 @@ body, html
     flex-direction column
 .project
   background-image _background-project-1
-  height 384px
+  height auto
   width 100%
   margin 0 auto
   background-size cover
   background-repeat no-repeat
   &__wrapper
-    padding 4em 0 2em 0
+    padding 2em 0 2em 0
   &__title
-    margin 20px auto 0 auto
+    margin 20px auto 10px auto
     color _white
     text-align center
     font-size 2em
     font-weight 300
     display block
+    width 70%
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+  &__details
+    color _gray_soft
+    font-size 14px
+    height: 50px
+    overflow hidden
+    max-width 400px
+    display block
+    text-align center
     width 80%
+    margin 1em auto
   &__button
     text-align center
     margin 1em 0
@@ -247,6 +261,7 @@ body, html
   max-width 433px
   min-width: 340px
   height 312px
+  background: _white
   margin 1em auto
   box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
   &__wrap
@@ -255,6 +270,9 @@ body, html
     flex-grow 1
   &__figure
     margin 0
+    width 179px
+    img
+      width 100%
   &__description
     padding .5em 0
   &__subtitle
@@ -263,17 +281,17 @@ body, html
     font-size 30px
     font-weight 300
   &__text
-    margin 0 1em
+    margin 0 0 0 1em
     text-align left
     font-size 1em
-    width 130px
-    height 88px
+    width 90%
+    height 110px
+    display block
     font-weight 300
   &__button
-    text-align left
     margin .8em
     button
-      width 170px
+      width 100%
       height 45px
       border none
       border-radius 5px
@@ -283,42 +301,16 @@ body, html
       font-weight 300
       font-size .9em
   &__state
-    text-align left
+    text-align center
     margin 1.5em 1em
     font-size .8em
     font-weight 300
     color _green
-/**
-  information contact
-*/
-.contact-info
-  background-color _white
-  position absolute
-  top 18em
-  width 90%
-  margin 0 auto
-  box-shadow 3px 3px 3px 0 rgba(0,0,0,0.3)
-.information
-  margin 1em 1em 5em 1em
-  &__subtitle
-    color _green_light
-    margin-bottom 0
-    font-weight 300
-  &__bar
-    height .15em
-    width 100%
-    background-color _green_light
-    border none
-  &__text
-    margin .5em
-    font-weight 300
+
 /**
   project-built
 */
 .project-built
-  background-color _white
-  position absolute
-  top 26em
   width 100%
 /**
   about-gallery
@@ -329,6 +321,7 @@ body, html
   margin 0 auto
   flex-wrap wrap
 .work
+  margin 0 auto
   &__figure
     margin .5em
   &__img
@@ -379,22 +372,123 @@ body, html
   width 100%
   height 192px
   background-image _background-footer
-  margin 0
+  margin 0 0 45px 0
+  padding 0
   background-size cover
   text-align center
-  background-position center center
-  bottom 0
-  &__wrap
-    display flex
+  position relative
   &__logo
     margin 0
-    flex-grow 1
+    position absolute
+    bottom 1em
+    left 1em
     img
       width 149px
       height 68px
   &__box
     width 700px
     height 100px
+/**
+Projects view
+*/
+.projects-view
+  width 100%
+  height 475px
+  z-index 1
+  background-image _background-projects
+  margin 0
+  background-size cover
+  text-align center
+  background-position center middle
+  &__box
+    display flex
+    height 75vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 0em auto
+  &__text
+    text-align center
+  &__title
+    font-size 55px
+    font-weight 300
+    display block
+    margin 190px auto 50px auto
+    color _white
+.project-list
+  margin -100px auto 0 auto
+  display flex
+  text-align: center
+  flex-direction column
+  .align
+    margin 0 auto
+    width 100%
+.projects-container
+  display flex
+  flex-direction column
+  width 1024px
+  .built
+    &__figure
+      text-align: left
+
+/**
+  Contact View
+*/
+.contact-view
+  width 100%
+  height 475px
+  z-index 1
+  background-image _background-projects
+  margin 0
+  background-size cover
+  text-align center
+  background-position center middle
+  &__box
+    display flex
+    height 75vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 0em auto
+  &__text
+    text-align center
+  &__title
+    font-size 55px
+    font-weight 300
+    display block
+    margin 190px auto 50px auto
+    color _white
+.contact-info
+  background-color _white
+  width 100%
+  display block
+  margin -100px auto 6em auto
+  max-width 1024px
+  box-shadow 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+  border-radius 5px
+  .align
+    display flex
+    flex-direction column
+    .info-container
+      flex 1
+.information
+  margin 1em 1em 5em 1em
+  &__subtitle
+    color _green_light
+    margin-bottom 0
+    font-weight 300
+  &__bar
+    height 2px
+    width 100%
+    background-color _green_light
+    border none
+  &__text
+    margin .5em
+    font-weight 300
 
 @media only screen and (min-width: 1000px)
   .align
@@ -417,11 +511,12 @@ body, html
     background rgba(255,255,255,0.8)
     position fixed
     width 100%
-    height 57px
+    height 51px
+    z-index: 90
     .logo
       position absolute
       left 13px
-      top 13px
+      top 10px
     ul
       margin 0
       padding 0
@@ -433,7 +528,8 @@ body, html
         a
           opacity 0.6
           display block
-          padding 13px 23px
+          font-size 13px
+          padding 10px 23px 13px 23px
           color _gray_medium
           text-decoration: none
           font-weight: 300
@@ -476,6 +572,9 @@ body, html
     &__button
       a
         margin 0
+
+  .project
+    height auto
   /**
     about-project
   */
@@ -501,3 +600,66 @@ body, html
       display inline-block
       margin 10px
       box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5)
+
+  .project-list
+    flex-direction: row
+  .project-list
+    margin -100px auto 0 auto
+    display flex
+    text-align: center
+    .align
+      margin 0 auto
+      max-width 1024px
+    .bar
+      max-width 895px
+  /**
+    Footer
+  */
+  .about-footer
+    margin 0
+
+  .projects-container
+    display flex
+    justify-content center
+    flex-wrap wrap
+    flex-direction row
+    text-align center
+    max-width 1024px
+    margin 0 auto 6em auto
+    .built
+      margin 1em
+      &__figure
+        text-align: left
+
+
+  .contact-info
+    width 100%
+    display block
+    margin -100px auto 6em auto
+    max-width 1024px
+    box-shadow 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+    border-radius 5px
+    .align
+      display flex
+      flex-direction row
+      justify-content center
+      max-width: 800px
+      .info-container
+        flex 1
+        text-align left
+        margin 0 1em
+
+  .information
+    margin 1em 1em 5em 1em
+    &__subtitle
+      color _green_light
+      margin-bottom 0
+      font-weight 300
+    &__bar
+      height 2px
+      width 100%
+      background-color _green_light
+      border none
+    &__text
+      margin .5em
+      font-weight 300
