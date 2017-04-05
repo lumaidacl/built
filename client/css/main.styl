@@ -153,21 +153,32 @@ body, html
     flex-direction column
 .project
   background-image _background-project-1
-  height 384px
+  height auto
   width 100%
   margin 0 auto
   background-size cover
   background-repeat no-repeat
   &__wrapper
-    padding 4em 0 2em 0
+    padding 2em 0 2em 0
   &__title
-    margin 20px auto 0 auto
+    margin 20px auto 10px auto
     color _white
     text-align center
     font-size 2em
     font-weight 300
     display block
+    width 70%
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5)
+  &__details
+    color _gray_soft
+    font-size 14px
+    height: 50px
+    overflow hidden
+    max-width 400px
+    display block
+    text-align center
     width 80%
+    margin 1em auto
   &__button
     text-align center
     margin 1em 0
@@ -259,6 +270,9 @@ body, html
     flex-grow 1
   &__figure
     margin 0
+    width 179px
+    img
+      width 100%
   &__description
     padding .5em 0
   &__subtitle
@@ -267,14 +281,14 @@ body, html
     font-size 30px
     font-weight 300
   &__text
-    margin 0 1em
+    margin 0 0 0 1em
     text-align left
     font-size 1em
-    width 130px
-    height 88px
+    width 90%
+    height 110px
+    display block
     font-weight 300
   &__button
-    text-align left
     margin .8em
     button
       width 100%
@@ -287,11 +301,13 @@ body, html
       font-weight 300
       font-size .9em
   &__state
-    text-align left
+    text-align center
     margin 1.5em 1em
     font-size .8em
     font-weight 300
     color _green
+    &--finished
+      color _gray_light
 
 /**
   project-built
@@ -558,6 +574,9 @@ Projects view
     &__button
       a
         margin 0
+
+  .project
+    height auto
   /**
     about-project
   */
