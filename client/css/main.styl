@@ -1,6 +1,7 @@
 @import 'normalize'
 
 _background-image = url(../img/group.png)
+_background-projects = url(../img/projects-bg.jpg)
 _background-project-1 = url(../img/on-sale-bg.jpg)
 _background-footer = url(../img/group-11.png)
 
@@ -65,6 +66,7 @@ body, html
   &__box
     display flex
     height 100vh
+    z-index: 80
   &__wrapper
     display flex
     justify-content center
@@ -247,6 +249,7 @@ body, html
   max-width 433px
   min-width: 340px
   height 312px
+  background: _white
   margin 1em auto
   box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
   &__wrap
@@ -273,7 +276,7 @@ body, html
     text-align left
     margin .8em
     button
-      width 170px
+      width 100%
       height 45px
       border none
       border-radius 5px
@@ -292,9 +295,6 @@ body, html
   project-built
 */
 .project-built
-  background-color _white
-  position absolute
-  top 26em
   width 100%
 /**
   about-gallery
@@ -305,6 +305,7 @@ body, html
   margin 0 auto
   flex-wrap wrap
 .work
+  margin 0 auto
   &__figure
     margin .5em
   &__img
@@ -356,21 +357,66 @@ body, html
   height 192px
   background-image _background-footer
   margin 0
+  padding 0
   background-size cover
   text-align center
-  background-position center center
-  bottom 0
-  &__wrap
-    display flex
+  position relative
   &__logo
     margin 0
-    flex-grow 1
+    position absolute
+    bottom 1em
+    left 1em
     img
       width 149px
       height 68px
   &__box
     width 700px
     height 100px
+/**
+Projects view
+*/
+.projects-view
+  width 100%
+  height 475px
+  z-index 1
+  background-image _background-projects
+  margin 0
+  background-size cover
+  text-align center
+  background-position center middle
+  &__box
+    display flex
+    height 75vh
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 0em auto
+  &__text
+    text-align center
+  &__title
+    font-size 55px
+    font-weight 300
+    display block
+    margin 190px auto 50px auto
+    color _white
+.project-list
+  margin -100px auto 0 auto
+  display flex
+  text-align: center
+  flex-direction column
+  .align
+    margin 0 auto
+    width 100%
+.projects-container
+  display flex
+  flex-direction column
+  width 1024px
+  .built 
+    &__figure
+      text-align: left
+
 
 @media only screen and (min-width: 1000px)
   .align
@@ -393,11 +439,12 @@ body, html
     background rgba(255,255,255,0.8)
     position fixed
     width 100%
-    height 57px
+    height 51px
+    z-index: 90
     .logo
       position absolute
       left 13px
-      top 13px
+      top 10px
     ul
       margin 0
       padding 0
@@ -409,7 +456,8 @@ body, html
         a
           opacity 0.6
           display block
-          padding 13px 23px
+          font-size 13px
+          padding 10px 23px 13px 23px
           color _gray_medium
           text-decoration: none
           font-weight: 300
@@ -477,3 +525,28 @@ body, html
       display inline-block
       margin 10px
       box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5)
+
+  .project-list
+    flex-direction: row
+  .project-list
+    margin -100px auto 0 auto
+    display flex
+    text-align: center
+    .align
+      margin 0 auto
+      max-width 1024px
+    .bar
+      max-width 895px
+
+  .projects-container
+    display flex
+    justify-content center
+    flex-wrap wrap
+    flex-direction row
+    text-align center
+    max-width 1024px
+    margin 0 auto 6em auto 
+    .built 
+      margin 1em
+      &__figure
+        text-align: left

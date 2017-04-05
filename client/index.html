@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Araucaria Construcciones</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/animate.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
@@ -51,13 +52,13 @@
 		<div class="align">
 			<div class="about-us__box">
 				<div class="about-us__wrapper">
-					<div class="about-us__logo">
+					<div class="about-us__logo wow fadeInUp" data-wow-delay="0.3s">
 						<img src="img/logo.png" alt="araucaria">
 					</div>
 					<div class="about-us__text">
-						<h3 class="about-us__title">Construimos espacios que realizan sueños</h3>
+						<h3 class="about-us__title wow fadeInUp" data-wow-delay="0.3s">Construimos espacios que realizan sueños</h3>
 					<div class="about-us__button">
-						<a type="button" href="projects.html">
+						<a type="button" href="projects.html" class=" wow flipInX" data-wow-delay="0.5s">
 							Descubre nuestros proyectos
 						</a>
 					</div>
@@ -69,9 +70,9 @@
 
 	<section class="about-project">
 		<div class="align">
-			<article class="project">
+			<article class="project wow fadeInUp" data-wow-delay="0.2s">
 				<div class="project__wrapper">
-					<div class="circle">
+					<div class="circle wow zoomIn" data-wow-delay="0.5s">
 						<p class="circle__percent">50%</p>
 						<p class="circle__text">vendido</p>
 					</div>
@@ -83,9 +84,9 @@
 					</div>
 				</div>
 			</article>
-			<article class="project">
+			<article class="project wow fadeInUp" data-wow-delay="0.3s">
 				<div class="project__wrapper">
-					<div class="circle">
+					<div class="circle wow zoomIn" data-wow-delay="0.8s">
 						<p class="circle__percent">75%</p>
 						<p class="circle__text">vendido</p>
 					</div>
@@ -277,6 +278,7 @@
 					</a>
 				</div>
 			</div>
+	</section>
 <!--contact-us-->
 	<section class="section sabout-contact">
 		<div class="align">
@@ -313,6 +315,9 @@
 			</div>
 	</section>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="app/bundle.js" ></script>
+	<script type="text/javascript" src="app/wow.js" ></script>
+	<script>
+		new WOW().init();
+	</script>
 </body>
 </html>
