@@ -2,6 +2,7 @@
 
 _background-image = url(../img/group.png)
 _background-projects = url(../img/projects-bg.jpg)
+_background-queruqueru = url(../img/queruqueru-bg.jpg)
 _background-contact = url(../img/contact-bg.jpg)
 _background-project-1 = url(../img/on-sale-bg.jpg)
 _background-footer = url(../img/group-11.png)
@@ -13,6 +14,7 @@ _gray_medium = #4a4a4a
 _gray_light = #9b9b9b
 _gray_soft = #d8d8d8
 _white = #FFFFFF
+_dark_white = #F3F3F3
 
 body
   font-family 'Roboto', sans-serif
@@ -56,6 +58,7 @@ body, html
 /**
   about-us
 */
+
 .about-us
   width 100%
   z-index 1
@@ -108,6 +111,9 @@ body, html
   display flex
   justify-content flex-end
   padding .7em
+  position absolute
+  top 0px
+  right 0px
   &__logo
     align-content flex-end
     margin .3em
@@ -189,16 +195,21 @@ body, html
   &__button
     text-align center
     margin 1em 0
-    button
+    a
       width 180px
-      height 45px
+      display block
       border-radius 5px
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
       color _white
-      margin 0
+      margin 0 auto
+      padding 1em 0
+      cursor pointer
+      text-decoration: none
       font-weight 300
       font-size 14px
       border none
+    a:hover
+      background-image linear-gradient(to bottom, #8fc73e, #61bb46)
 
     button:hover
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
@@ -271,17 +282,17 @@ body, html
   background: _white
   margin 1em auto
   box-shadow 3px 3px 3px 0 rgba(0, 0, 0, 0.3)
+  overflow hidden
   &__wrap
     display flex
-  &__image
-    flex-grow 1
   &__figure
     margin 0
-    width 179px
+    width 180px
     img
       width 100%
   &__description
     padding .5em 0
+    width: 100%
   &__subtitle
     margin .3em .5em
     text-align left
@@ -292,27 +303,40 @@ body, html
     text-align left
     font-size 1em
     width 90%
-    height 110px
+    height 50px
+    max-height 105px
+    max-height 
     display block
     font-weight 300
+    overflow hidden
   &__button
     margin .8em
-    button
+    a
+      display block
       width 100%
-      height 45px
+      padding 1em 0
+      text-align: center
+      text-decoration none
       border none
       border-radius 5px
       background-image linear-gradient(to bottom, #8fc73e, #61bb46)
       color _white
       margin 0
       font-weight 300
+      transition all ease 0.5s
       font-size .9em
+      opacity 0.9
+    a:hover
+      opacity 1
+      box-shadow 2px 2px 3px rgba(0,0,0,0.3)
   &__state
     text-align center
     margin 1.5em 1em
     font-size .8em
     font-weight 300
     color _green
+    img
+      margin 0 0 -8px 5px
 
 /**
   project-built
@@ -422,7 +446,7 @@ Projects view
     font-size 55px
     font-weight 300
     display block
-    margin 190px auto 50px auto
+    margin 130px auto 50px auto
     color _white
 .project-list
   margin -100px auto 0 auto
@@ -435,7 +459,7 @@ Projects view
 .projects-container
   display flex
   flex-direction column
-  width 1024px
+  max-width 1024px
   .built
     &__figure
       text-align: left
@@ -496,6 +520,135 @@ Projects view
   &__text
     margin .5em
     font-weight 300
+/**
+Project-details
+*/
+.project-header
+  width 100%
+  height 600px
+  z-index 1
+  margin 0
+  background-size cover
+  text-align center
+  background-position center middle
+  &--queruqueru
+      background-image _background-queruqueru
+  &__wrapper
+    display flex
+    justify-content center
+    flex-wrap wrap
+    height 400px
+    margin 0em auto
+  &__text
+    text-align center
+  &__title
+    display block
+    height 170px
+    margin 120px auto 50px auto
+    color _white
+    img
+      height: 100%
+  &__progress-box
+    width 200px
+    display flex
+    flex-direction row
+    justify-content: center
+  &__circle
+    margin 0 auto
+
+  .circle
+    width 50px
+    height 50px
+    border 3px solid _green
+    border-radius 50%
+    background-color blue
+    margin 0 auto
+    background-color rgba(0, 0, 0, 0.2)
+    &__percent
+      color _white
+      text-align center
+      font-size 12px
+      font-weight 400
+      margin-top 18px
+      margin-bottom 0
+    &__text
+      color _white
+      text-align center
+      font-size 13px
+      font-weight 100
+      margin 0
+      padding 0
+      margin-top 5px
+      
+.project-container
+  text-align: center
+  .align
+    max-width 1024px
+    width: 90%
+    background _white
+    position relative
+    margin -150px auto 0 auto
+    box-shadow 0 -1px 5px rgba(0, 0, 0, 0.4)
+    #accordion
+      h3
+        border-bottom 1px solid _gray_soft
+        border-top 1px solid _gray_soft
+        padding 0.8em 0
+        color _gray_medium
+        font-weight: 400
+        margin -1px 0 0 0
+    .accordion
+      &__item
+        background _dark_white
+
+        h2
+          font-size 20px
+          font-weight: 400
+          color _gray_medium
+          padding 1em 0 0 0
+          margin 0 0 20px 0
+        p
+          width: 90%
+          max-width: 500px
+          font-weight: 300
+          margin 0 auto 20px auto
+          color _gray_medium
+          display block
+        img
+          width: 90%
+          max-width 400px
+          margin: 0 auto
+  
+
+.contact-info
+  background-color _white
+  width 100%
+  display block
+  margin -100px auto 6em auto
+  max-width 1024px
+  box-shadow 4px 4px 8px 0 rgba(0, 0, 0, 0.2)
+  border-radius 5px
+  .align
+    display flex
+    flex-direction column
+    .info-container
+      flex 1
+.information
+  margin 1em 1em 5em 1em
+  &__subtitle
+    color _green_light
+    margin-bottom 0
+    font-weight 300
+  &__bar
+    height 2px
+    width 100%
+    background-color _green_light
+    border none
+  &__text
+    margin .5em
+    font-weight 300
+
+
 
 @media only screen and (min-width: 1000px)
   .align
@@ -639,7 +792,9 @@ Projects view
       &__figure
         text-align: left
 
-
+  .projects-view
+    &__title
+      margin 180px auto 50px auto
   .contact-info
     width 100%
     display block
