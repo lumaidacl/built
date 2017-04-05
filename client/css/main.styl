@@ -111,6 +111,13 @@ body, html
   &__logo
     align-content flex-end
     margin .3em
+.arrow-down
+  width 25px
+  position absolute
+  bottom 4em
+  left 50%
+  margin -15px 0 0 -12px
+
 /**
   our-projects
 */
@@ -440,7 +447,7 @@ Projects view
   width 100%
   height 475px
   z-index 1
-  background-image _background-projects
+  background-image _background-contact
   margin 0
   background-size cover
   text-align center
@@ -509,6 +516,7 @@ Projects view
   .desktop-nav
     display block
     background rgba(255,255,255,0.8)
+    box-shadow 1px 1px 4px rgba(0,0,0,0.3)
     position fixed
     width 100%
     height 51px
@@ -553,25 +561,25 @@ Projects view
     &__box
       flex-direction column
     &__wrapper
-      width 900px
-      height 150px
+      width 500px
+      height 380px
       position absolute
       top 50%
       left 50%
-      margin -75px 0 0 -450px
+      margin -190px 0 0 -250px
     &__button
-      margin 15px 0 0 40px
+      margin 15px auto 0 auto
       text-align left
     &__text
-      text-align left
+      text-align center
     &__title
       width auto
       font-size 40px
-      margin 0 0 0 40px
-      text-align left
+      margin 0
+      text-align center
     &__button
       a
-        margin 0
+        margin 30px auto
 
   .project
     height auto
@@ -663,3 +671,4 @@ Projects view
     &__text
       margin .5em
       font-weight 300
+      color _gray_medium
