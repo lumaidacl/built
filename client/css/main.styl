@@ -460,9 +460,10 @@ Projects view
   display flex
   flex-direction column
   max-width 1024px
-  .built
-    &__figure
-      text-align: left
+  
+.built
+  &__figure
+    text-align: left
 
 /**
   Contact View
@@ -600,7 +601,11 @@ Project-details
     .accordion
       &__item
         background _dark_white
-
+        display flex
+        flex-direction row
+        align-items center
+        justify-content center
+        flex-wrap wrap
         h2
           font-size 20px
           font-weight: 400
@@ -609,16 +614,16 @@ Project-details
           margin 0 0 20px 0
         p
           width: 90%
-          max-width: 500px
+          max-width: 430px
           font-weight: 300
           margin 0 auto 20px auto
           color _gray_medium
           display block
         img
           width: 90%
-          max-width 400px
-          margin: 0 auto
-  
+          max-width 300px
+          margin: 0 auto 40px auto
+      
 
 .contact-info
   background-color _white
