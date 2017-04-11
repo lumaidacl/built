@@ -270,6 +270,11 @@ svg
     background-color _green_light
     &--double
       flex 2
+    &--internal
+      height .15em
+      width 100%
+      position relative
+      top -10px
 /**
   divisor
 */
@@ -589,7 +594,36 @@ Project-details
       margin 0
       padding 0
       margin-top 5px
-
+/**
+* Information contact desktop
+*/
+.internal-nav
+  display block
+  width 100%
+  z-index: 90
+  position relative
+  top -45px
+  &__list
+    margin 0
+    padding 0
+    position absolute
+    right 0
+  &__item
+    display inline-block
+    vertical-align middle
+  &__link
+    opacity 0.6
+    display block
+    font-size 13px
+    padding 10px 23px 13px 23px
+    color _white
+    text-decoration: none
+    font-weight: 300
+    &:hover
+      color _white
+/**
+Project-container mobile
+*/
 .project-container
   text-align: center
   .align
@@ -616,7 +650,7 @@ Project-details
         justify-content center
         flex-wrap wrap
         h2
-          font-size 20px
+          font-size 26px
           font-weight: 400
           color _gray_medium
           padding 1em 0 0 0
@@ -628,12 +662,13 @@ Project-details
           margin 0 auto 20px auto
           color _gray_medium
           display block
+          text-align left
+          &--desktop
+            width 72%
         img
           width: 90%
           max-width 300px
           margin: 0 auto 40px auto
-
-
 .contact-info
   background-color _white
   width 100%
@@ -661,12 +696,11 @@ Project-details
   &__text
     margin .5em
     font-weight 300
-
-
-
 @media only screen and (min-width: 1000px)
   .align
     margin 0 auto
+  .projects-container
+    display none
 
 @media only screen and (min-width: 550px)
   .align
@@ -721,6 +755,7 @@ Project-details
     display none
   .social-network
     display none
+
   /**
     about-us
   */
