@@ -235,6 +235,15 @@ body, html
     font-size 16px
     font-weight 100
     margin-top 0px
+
+/*
+* component circle
+*/
+.container
+  text-align center
+svg
+  width 23%
+/**
 /**
   component subtitles page
 */
@@ -261,6 +270,11 @@ body, html
     background-color _green_light
     &--double
       flex 2
+    &--internal
+      height .15em
+      width 100%
+      position relative
+      top -10px
 /**
   divisor
 */
@@ -305,7 +319,7 @@ body, html
     width 90%
     height 50px
     max-height 105px
-    max-height 
+    max-height
     display block
     font-weight 300
     overflow hidden
@@ -460,7 +474,7 @@ Projects view
   display flex
   flex-direction column
   max-width 1024px
-  
+
 .built
   &__figure
     text-align: left
@@ -580,7 +594,10 @@ Project-details
       margin 0
       padding 0
       margin-top 5px
-      
+
+/**
+Project-container mobile
+*/
 .project-container
   text-align: center
   .align
@@ -607,24 +624,69 @@ Project-details
         justify-content center
         flex-wrap wrap
         h2
-          font-size 20px
+          font-size 26px
           font-weight: 400
           color _gray_medium
           padding 1em 0 0 0
           margin 0 0 20px 0
         p
-          width: 90%
+          width: 72%
           max-width: 430px
           font-weight: 300
           margin 0 auto 20px auto
           color _gray_medium
           display block
+          text-align left
         img
           width: 90%
           max-width 300px
           margin: 0 auto 40px auto
-      
-
+/**
+Project-container desktop
+*/
+.project-container
+  text-align: center
+  .align
+    max-width 1024px
+    width: 90%
+    background _white
+    position relative
+    margin -150px auto 0 auto
+    box-shadow 0 -1px 5px rgba(0, 0, 0, 0.4)
+    #accordion
+      h3
+        border-bottom 1px solid _gray_soft
+        border-top 1px solid _gray_soft
+        padding 0.8em 0
+        color _gray_medium
+        font-weight: 400
+        margin -1px 0 0 0
+    .accordion
+      &__item
+        background _dark_white
+        display flex
+        flex-direction row
+        align-items center
+        justify-content center
+        flex-wrap wrap
+        h2
+          font-size 26px
+          font-weight: 400
+          color _gray_medium
+          padding 1em 0 0 0
+          margin 0 0 20px 0
+        p
+          width: 72%
+          max-width: 430px
+          font-weight: 300
+          margin 0 auto 20px auto
+          color _gray_medium
+          display block
+          text-align left
+        img
+          width: 90%
+          max-width 300px
+          margin: 0 auto 40px auto
 .contact-info
   background-color _white
   width 100%
@@ -652,12 +714,11 @@ Project-details
   &__text
     margin .5em
     font-weight 300
-
-
-
 @media only screen and (min-width: 1000px)
   .align
     margin 0 auto
+  .project-container
+    display none
 
 @media only screen and (min-width: 550px)
   .align
@@ -668,6 +729,8 @@ Project-details
       flex 0
     &__title
       text-align left
+  .projects-container
+    display none
   /**
     desktop-nav
   */
@@ -704,7 +767,7 @@ Project-details
           border-bottom solid 3px _green
         .social-network
           &__logo
-            padding 10px 5px
+            padding 10px 2px
   /**
     mobile-nav
   */
@@ -712,6 +775,71 @@ Project-details
     display none
   .social-network
     display none
+
+/**
+* Information contact desktop
+*/
+  .internal-nav
+    display block
+    width 100%
+    z-index: 90
+    position relative
+    top -45px
+    &__list
+      margin 0
+      padding 0
+      position absolute
+      right 0
+    &__item
+      display inline-block
+      vertical-align middle
+    &__link
+      display block
+      font-size 13px
+      padding 10px 23px 13px 23px
+      color #BEBDB9
+      text-decoration: none
+      font-weight: 300
+      &:hover
+        color _white
+/**
+Project-container desktop
+*/
+.project-desktop
+  text-align: center
+  .align
+    max-width 1024px
+    width: 90%
+    background _white
+    position relative
+    margin -150px auto 0 auto
+    box-shadow 0 -1px 5px rgba(0, 0, 0, 0.4)
+    .element
+      &__item
+        background _dark_white
+        display flex
+        flex-direction row
+        align-items center
+        justify-content center
+        flex-wrap wrap
+        h2
+          font-size 26px
+          font-weight: 400
+          color _gray_medium
+          padding 1em 0 0 0
+          margin 0 0 20px 0
+        p
+          width: 72%
+          max-width: 430px
+          font-weight: 300
+          margin 0 auto 20px auto
+          color _gray_medium
+          display block
+          text-align left
+        img
+          width: 90%
+          max-width 300px
+          margin: 0 auto 40px auto
   /**
     about-us
   */
